@@ -4,82 +4,90 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maison Margiela / Folders</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preload" as="image" href="images/01-printed-archive/MM_Folders_Printed_Research_04.jpg">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="loading">
+  <style>
+    body.loading main,
+    body.loading footer { opacity: 0; }
+    body:not(.loading) main,
+    body:not(.loading) footer { transition: opacity 0.6s ease; }
+  </style>
   <header>
     <div class="header-left">
-      <h1>Maison Margiela, <em>Folders</em></h1>
+      <h1><a href="https://www.maisonmargiela.com/en-us/maisonmargiela_folders.html" target="_blank">Maison Margiela, <em>Folders</em></a></h1>
     </div>
     <nav class="header-center">
       <a href="/" class="active">Home</a>
-      <a href="/gallery">Gallery</a>
-      <a href="/info">Info</a>
+      <a href="/gallery.html">Gallery</a>
+      <a href="/info.html">Info</a>
     </nav>
     <div class="header-right">
-      <a href="https://zaynebcherif.vercel.app/" target="_blank" class="contact-link">Contact &#8599;</a>
+      <a href="https://www.dropbox.com/scl/fo/q9xdsiuqxtwhm6mat8820/AOUCDXrw_DcaOV4f50EP-Tg/3_Fall-Winter%202026%20Show?rlkey=09jhiuc26dqq8pt6ix437tanv&subfolder_nav_tracking=1&e=1&dl=0" target="_blank" class="contact-link">Dropbox &#8599;</a>
     </div>
   </header>
 
   <main>
     <div class="hero">
       <div class="hero-image">
-        <img src="images/01-printed-archive/MM_Folders_Printed_Research_04.jpg" alt="Maison Margiela Folders — Printed Archive" id="hero-img" class="hero-front">
+        <img src="images/01-printed-archive/MM_Folders_Printed_Research_04.jpg" alt="Maison Margiela Folders — Printed Archive" id="hero-img" class="hero-front" fetchpriority="high">
         <img src="images/01-printed-archive/MM_Folders_Printed_Research_04.jpg" alt="" id="hero-img-back" class="hero-back">
       </div>
     </div>
 
     <div class="thumbnail-strip">
       <div class="thumbnail" data-src="images/01-printed-archive/MM_Folders_Printed_Research_01.jpg">
-        <img src="images/01-printed-archive/MM_Folders_Printed_Research_01.jpg" alt="Printed Research 01">
+        <img src="images/01-printed-archive/MM_Folders_Printed_Research_01.jpg" alt="Printed Research 01" loading="lazy">
       </div>
       <div class="thumbnail" data-src="images/01-printed-archive/MM_Folders_Printed_Research_02.jpg">
-        <img src="images/01-printed-archive/MM_Folders_Printed_Research_02.jpg" alt="Printed Research 02">
+        <img src="images/01-printed-archive/MM_Folders_Printed_Research_02.jpg" alt="Printed Research 02" loading="lazy">
       </div>
       <div class="thumbnail" data-src="images/01-printed-archive/MM_Folders_Printed_Research_03.jpg">
-        <img src="images/01-printed-archive/MM_Folders_Printed_Research_03.jpg" alt="Printed Research 03">
+        <img src="images/01-printed-archive/MM_Folders_Printed_Research_03.jpg" alt="Printed Research 03" loading="lazy">
       </div>
       <div class="thumbnail" data-src="images/01-printed-archive/MM_Folders_Printed_Research_04.jpg">
-        <img src="images/01-printed-archive/MM_Folders_Printed_Research_04.jpg" alt="Printed Research 04">
+        <img src="images/01-printed-archive/MM_Folders_Printed_Research_04.jpg" alt="Printed Research 04" loading="lazy">
       </div>
       <div class="thumbnail" data-src="images/01-printed-archive/MM_Folders_Printed_Research_05.jpg">
-        <img src="images/01-printed-archive/MM_Folders_Printed_Research_05.jpg" alt="Printed Research 05">
+        <img src="images/01-printed-archive/MM_Folders_Printed_Research_05.jpg" alt="Printed Research 05" loading="lazy">
       </div>
       <div class="thumbnail" data-src="images/01-printed-archive/MM_Folders_Printed_Research_06.jpg">
-        <img src="images/01-printed-archive/MM_Folders_Printed_Research_06.jpg" alt="Printed Research 06">
+        <img src="images/01-printed-archive/MM_Folders_Printed_Research_06.jpg" alt="Printed Research 06" loading="lazy">
       </div>
       <div class="thumbnail" data-src="images/01-printed-archive/MM_Folders_Printed_Research_07.jpg">
-        <img src="images/01-printed-archive/MM_Folders_Printed_Research_07.jpg" alt="Printed Research 07">
+        <img src="images/01-printed-archive/MM_Folders_Printed_Research_07.jpg" alt="Printed Research 07" loading="lazy">
       </div>
       <div class="thumbnail" data-src="images/01-printed-archive/MM_Folders_Printed_Research_08.jpg">
-        <img src="images/01-printed-archive/MM_Folders_Printed_Research_08.jpg" alt="Printed Research 08">
+        <img src="images/01-printed-archive/MM_Folders_Printed_Research_08.jpg" alt="Printed Research 08" loading="lazy">
       </div>
       <div class="thumbnail" data-src="images/02-digital-archive/1_MM_Folders_Artisanal_Marina Faust_01.jpg">
-        <img src="images/02-digital-archive/1_MM_Folders_Artisanal_Marina Faust_01.jpg" alt="Artisanal — Marina Faust">
+        <img src="images/02-digital-archive/1_MM_Folders_Artisanal_Marina Faust_01.jpg" alt="Artisanal — Marina Faust" loading="lazy">
       </div>
       <div class="thumbnail" data-src="images/02-digital-archive/1_MM_Folders_Artisanal_Giovanni Giannoni_01.jpg">
-        <img src="images/02-digital-archive/1_MM_Folders_Artisanal_Giovanni Giannoni_01.jpg" alt="Artisanal — Giovanni Giannoni">
+        <img src="images/02-digital-archive/1_MM_Folders_Artisanal_Giovanni Giannoni_01.jpg" alt="Artisanal — Giovanni Giannoni" loading="lazy">
       </div>
       <div class="thumbnail" data-src="images/02-digital-archive/2_MM_Folders_Anonymity_Anders Edström_01.jpg">
-        <img src="images/02-digital-archive/2_MM_Folders_Anonymity_Anders Edström_01.jpg" alt="Anonymity — Anders Edström">
+        <img src="images/02-digital-archive/2_MM_Folders_Anonymity_Anders Edström_01.jpg" alt="Anonymity — Anders Edström" loading="lazy">
       </div>
       <div class="thumbnail" data-src="images/02-digital-archive/2_MM_Folders_Anonymity_Melanie & Ramon_01.jpg">
-        <img src="images/02-digital-archive/2_MM_Folders_Anonymity_Melanie & Ramon_01.jpg" alt="Anonymity — Melanie & Ramon">
+        <img src="images/02-digital-archive/2_MM_Folders_Anonymity_Melanie & Ramon_01.jpg" alt="Anonymity — Melanie & Ramon" loading="lazy">
       </div>
       <div class="thumbnail" data-src="images/02-digital-archive/3_MM_Folders_Tabi_Anders Edström.jpg">
-        <img src="images/02-digital-archive/3_MM_Folders_Tabi_Anders Edström.jpg" alt="Tabi — Anders Edström">
+        <img src="images/02-digital-archive/3_MM_Folders_Tabi_Anders Edström.jpg" alt="Tabi — Anders Edström" loading="lazy">
       </div>
       <div class="thumbnail" data-src="images/02-digital-archive/3_MM_Folders_Tabi_Melanie & Ramon_01.jpg">
-        <img src="images/02-digital-archive/3_MM_Folders_Tabi_Melanie & Ramon_01.jpg" alt="Tabi — Melanie & Ramon">
+        <img src="images/02-digital-archive/3_MM_Folders_Tabi_Melanie & Ramon_01.jpg" alt="Tabi — Melanie & Ramon" loading="lazy">
       </div>
       <div class="thumbnail" data-src="images/02-digital-archive/4_MM_Folders_Bianchetto_Melanie & Ramon_01.jpg">
-        <img src="images/02-digital-archive/4_MM_Folders_Bianchetto_Melanie & Ramon_01.jpg" alt="Bianchetto — Melanie & Ramon">
+        <img src="images/02-digital-archive/4_MM_Folders_Bianchetto_Melanie & Ramon_01.jpg" alt="Bianchetto — Melanie & Ramon" loading="lazy">
       </div>
       <div class="thumbnail" data-src="images/02-digital-archive/4_MM_Folders_Bianchetto_Anders Edström_01.jpg">
-        <img src="images/02-digital-archive/4_MM_Folders_Bianchetto_Anders Edström_01.jpg" alt="Bianchetto — Anders Edström">
+        <img src="images/02-digital-archive/4_MM_Folders_Bianchetto_Anders Edström_01.jpg" alt="Bianchetto — Anders Edström" loading="lazy">
       </div>
     </div>
   </main>
@@ -130,8 +138,12 @@
       document.body.classList.toggle('light-ui', brightness < 140);
     }
 
-    hero.addEventListener('load', updateUI);
-    if (hero.complete) updateUI();
+    function reveal() {
+      document.body.classList.remove('loading');
+    }
+
+    hero.addEventListener('load', () => { updateUI(); reveal(); });
+    if (hero.complete) { updateUI(); reveal(); }
 
     function swapHero(src, alt) {
       heroBack.src = heroFront.src;

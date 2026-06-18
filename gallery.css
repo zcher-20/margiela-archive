@@ -1,0 +1,98 @@
+.gallery-layout {
+  display: flex;
+  padding: 5rem 2rem 4rem;
+  gap: 2rem;
+  min-height: 100vh;
+}
+
+.gallery-columns {
+  display: flex;
+  gap: 2rem;
+  flex: 1;
+}
+
+.gallery-column {
+  flex: 1;
+  border-top: 1px solid #111;
+  padding-top: 0.5rem;
+}
+
+.column-header {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 0 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.entry {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.entry:hover {
+  opacity: 0.5;
+}
+
+.entry-num {
+  font-size: 0.75rem;
+  color: #888;
+  flex-shrink: 0;
+  min-width: 3rem;
+}
+
+.entry-title {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.entry-sub {
+  font-size: 0.75rem;
+  color: #666;
+  display: block;
+}
+
+.gallery-preview {
+  position: sticky;
+  top: 5rem;
+  width: 35%;
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+
+.gallery-preview img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: 70vh;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.preview-caption {
+  font-size: 0.8rem;
+  color: #888;
+  text-align: right;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .gallery-layout {
+    flex-direction: column;
+    padding: 4rem 1.25rem 4rem;
+  }
+
+  .gallery-columns {
+    flex-direction: column;
+  }
+
+  .gallery-preview {
+    position: fixed;
+    bottom: 3rem;
+    right: 1.25rem;
+    width: 40%;
+  }
+}

@@ -1,0 +1,100 @@
+.info-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 5rem 2rem 2rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.info-text {
+  max-width: 50%;
+  padding-top: 2.5rem;
+  padding-left: 2rem;
+}
+
+.info-lead {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+}
+
+.info-body p {
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+}
+
+.info-bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  margin-top: auto;
+  padding-top: 4.5rem;
+  align-self: flex-end;
+  margin-right: 15%;
+}
+
+.info-image {
+  max-width: 220px;
+}
+
+.info-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.info-contact {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  padding-bottom: 0.25rem;
+}
+
+.info-link {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 0.5px;
+  transition: opacity 0.2s;
+}
+
+.info-link:hover {
+  opacity: 0.5;
+}
+
+.info-contact a {
+  color: var(--text);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.info-contact a:hover {
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  .info-text {
+    max-width: 90%;
+  }
+
+  .info-lead {
+    font-size: 1rem;
+  }
+
+  .info-body p {
+    font-size: 0.9rem;
+  }
+
+  .info-bottom {
+    padding-top: 5rem;
+  }
+
+  .info-image {
+    max-width: 180px;
+  }
+}
