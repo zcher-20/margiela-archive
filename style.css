@@ -43,13 +43,14 @@ header {
   left: 0;
   right: 0;
   z-index: 100;
-  background: var(--bg);
+  background: transparent;
 }
 
 .header-left h1 {
   font-size: 1.05rem;
   font-weight: 400;
   letter-spacing: 0.01em;
+  transition: color 0.6s ease;
 }
 
 .header-left h1 em {
@@ -64,7 +65,7 @@ header {
 .header-center a {
   font-size: 1.05rem;
   font-weight: 400;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s, color 0.6s ease;
 }
 
 .header-center a:hover {
@@ -74,7 +75,7 @@ header {
 .header-right .contact-link {
   font-size: 1.05rem;
   font-weight: 400;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s, color 0.6s ease;
 }
 
 .header-right .contact-link:hover {
@@ -86,38 +87,60 @@ header {
 main {
   flex: 1;
   display: flex;
-  flex-direction: column;
-  padding-top: 3.5rem;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .hero {
-  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 2rem 0;
+  padding: 0;
+  flex: 1;
 }
 
 .hero-image {
-  max-width: 520px;
+  max-width: 75vw;
+  max-height: 100vh;
   width: 100%;
+  position: relative;
 }
 
 .hero-image img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  max-height: 100vh;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
+}
+
+.hero-front {
+  position: relative;
+  z-index: 2;
+  transition: opacity 0.5s ease;
+}
+
+.hero-back {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
 }
 
 /* ── Thumbnail strip ── */
 
 .thumbnail-strip {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 80%;
+  transform: translateY(-50%);
   display: flex;
-  gap: 0.5rem;
-  padding: 1.5rem 2rem;
+  gap: 2px;
+  padding: 0 2rem;
   overflow-x: auto;
   scrollbar-width: none;
+  z-index: 10;
 }
 
 .thumbnail-strip::-webkit-scrollbar {
@@ -129,14 +152,15 @@ main {
   width: 90px;
   height: 90px;
   overflow: hidden;
-  opacity: 0.5;
-  transition: opacity 0.3s;
   cursor: pointer;
+  opacity: 0.4;
+  filter: grayscale(1);
+  transition: opacity 0.3s, filter 0.3s;
 }
 
-.thumbnail:hover,
-.thumbnail.active {
+.thumbnail:hover {
   opacity: 1;
+  filter: grayscale(0);
 }
 
 .thumbnail img {
@@ -153,6 +177,11 @@ footer {
   justify-content: space-between;
   align-items: flex-end;
   padding: 1rem 2rem 1.5rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
 }
 
 .footer-left p {
@@ -165,8 +194,63 @@ footer {
   font-style: italic;
 }
 
+.footer-left p,
+.footer-right p {
+  transition: color 0.6s ease;
+}
+
 .footer-right p {
   font-size: 0.9rem;
+}
+
+body.light-ui .header-center a {
+  color: #f0f0f0;
+}
+
+/* ── Lightbox ── */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  cursor: none;
+}
+
+.lightbox.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-img {
+  max-width: 75vw;
+  max-height: 90vh;
+  object-fit: contain;
+  transition: opacity 0.6s ease;
+}
+
+.lightbox-cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 300;
+  font-family: var(--font);
+  font-size: 0.65rem;
+  letter-spacing: 0.03em;
+  background: #111;
+  color: #f0f0f0;
+  padding: 0.15rem 0.35rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.lightbox.open ~ .lightbox-cursor {
+  opacity: 1;
 }
 
 /* ── Responsive ── */
@@ -190,7 +274,7 @@ footer {
   }
 
   .hero {
-    padding: 1rem 1.25rem 0;
+    padding: 1rem 1.25rem;
   }
 
   .hero-image {
@@ -198,7 +282,7 @@ footer {
   }
 
   .thumbnail-strip {
-    padding: 1rem 1.25rem;
+    padding: 0 1.25rem;
   }
 
   .thumbnail {
